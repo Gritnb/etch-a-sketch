@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0">
+        <title>Project: Etch-a-Sketch</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <p id="title">Etch-a-Sketch!</p>
+        </header>
+        <main>
+            <div class="canvas">
+                
+            </div>
+            <div class="options">
+                <div class="color">
+                    <div class="picker-container">
+                        <p class="picker-header">
+                        Color:
+                        </p>
+                        <div class="picker-box">
+                            <input type="color"
+                                   class="color-picker"
+                                   value="#CCCCCC">
+                            </div>
+                        </div>
+                    <hr>
+                    <div class="button-container">
+                        <button class="rnd-btn">Randomize</button>
+                    </div>
+                </div>
+                <div class="grid-size">
+                    <p class="size-header">Grid Size:</p>
+                    <div class="range-container">
+                        <p class="min-max">16</p>
+                        <input type="range"
+                               min="16"
+                               max="100"
+                               step="1"
+                               class="range-slider"
+                               value="16">
+                        <p class="min-max">100</p>
+                    </div>
+                </div>
+                <div class="misc">
+                    <div class="eraser-div">
+                        <button class="eraser-btn">Eraser</button>
+                    </div>
+                    <hr>
+                    <div class="reset-div">
+                        <button class="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <footer>
+                <p>© 2025 GCarlott.</p>
+                <a href="https://github.com/Gritnb/etch-a-sketch">
+                <img src="images/github-mark.svg"
+                     alt="Github Logo"
+                     width="25px"
+                     class="git-logo"
+                     target="_blank"></a>
+            </footer>
+        </footer>
+    <script src="main.js"></script>
+    </body>
+</html>
+
