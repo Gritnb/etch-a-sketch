@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:SCAN@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --rainbow-theme: #FF0000 0%,
+                     #FF9600 10%,
+                     #D2DC23 20%,
+                     #50DC4B 30%,
+                     #41DCD7 40%,
+                     #2DC8E1 50%,
+                     #1E7DF0 60%,
+                     #5F14F0 70%,
+                     #B90AFA 80%,
+                     #FA0ADC 90%,
+                     #FF0000 100%;
+    --text-font-family: 'Montserrat', 'sans-serif';
+    --font-color: #DBDBDB;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #242424;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-family: 'Sixtyfour', 'sans-serif';
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" -5;
+    font-size: 48px;
+    font-style: normal;
+    text-align: center;
+    padding: 15px;
+    flex: 1;
+}
+
+#title {
+    background: linear-gradient(
+                45deg, 
+                var(--rainbow-theme));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.canvas,
+.options {
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+                  to bottom right, 
+                  var(--rainbow-theme));
+    border-image-slice: 1;
+    background-color: #191919;
+    box-sizing: content-box;
+    width: 600px;
+}
+
+.canvas {
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options {
+    height: 100px;
+    width: 600px;
+    display: flex;
+}
+
+.color,
+.misc {
+    flex: 1.5;
+}
+
+.grid-size {
+    flex: 2;
+}
+
+.color,
+.grid-size,
+.misc {
+    font-family: var(--text-font-family);
+    color: var(--font-color);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.picker-container,
+.button-container,
+.size-header,
+.range-container,
+.eraser-div,
+.reset-div {
+    flex: 1;
+}
+
+.picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picker-header,
+.size-header {
+    text-align: center;
+    padding-right: 12px;
+    display: inline-block;
+}
+
+.picker-box {
+    height: 30px;
+    width: 30px;
+    border-radius: 20%;
+    display: inline-block;
+}
+
+.color-picker {
+    display: block;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+hr {
+    width: 75%;
+    margin: 0 auto;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: none;
+    border-right: none;
+}
+
+.button-container,
+.eraser-div,
+.reset-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rnd-btn,
+.eraser-btn,
+.reset-btn {
+    font-family: var(--text-font-family);
+    color: var(--font-color);
+    font-size: 20px;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    padding: 3px 14px;
+    transition-duration: 0.3s;
+}
+
+.rnd-btn,
+.eraser-btn {
+    background-color: #4D4D4D;
+}
+
+.rnd-btn:hover,
+.eraser-btn:hover {
+    background-color: #6E6E6E;
+    transform: scaleX(0.95);
+}
+
+.reset-btn {
+    background-color: #FB5643;
+    color: #F5F5F5;
+    transition-duration: 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #BE0F32;
+    color: #FFFFFF;
+}
+
+.grid-size {
+    border-left: 1px solid #CCCCCC;
+    border-right:  1px solid #CCCCCC;
+    margin: 10px 0;
+}
+
+.size-header {
+    padding-top: 5px;
+}
+
+.range-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.range-slider {
+    margin: 0 10px;
+}
+
+footer {
+    font-family: var(--text-font-family);
+    font-size: 20px;
+    color: #7A7A7A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    padding: 5px;
+}
+
+.git-logo {
+    filter: invert(90%) sepia(83%) saturate(0%) hue-rotate(305deg) brightness(113%) contrast(100%);
+    transition-duration: 0.3s;
+}
+
+.git-logo:hover {
+    transform: scale(1.1);
+}
